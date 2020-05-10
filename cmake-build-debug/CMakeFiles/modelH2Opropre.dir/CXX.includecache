@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/evamo/CLionProjects/modelH2Opropre/src/model/constantes/constantes.cpp
+constantes.hpp
+C:/Users/evamo/CLionProjects/modelH2Opropre/src/model/constantes/constantes.hpp
+
+C:/Users/evamo/CLionProjects/modelH2Opropre/src/model/constantes/constantes.hpp
+string
+-
+
