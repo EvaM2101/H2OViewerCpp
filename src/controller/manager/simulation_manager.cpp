@@ -15,12 +15,13 @@ SimulationManager::SimulationManager() :
     m_selection(SelectionneurMolecules::select_indices(
             m_simulation.get_boite_i(0),
             Vector3D<double>(0,0,0),
-            5.0,
-            20
+            3.86,
+            10
     )),
     m_iteration_courante(0),
     m_dx(20.0), m_dy(20.0), m_dz(20.0),
-    m_chrono(0)
+    m_chrono(0),
+    m_temps_positif(true)
     {}
 
 /*static*/ Simulation SimulationManager::load_simulation(){
@@ -99,13 +100,24 @@ void SimulationManager::update_clavier(double dt) {
 
 void SimulationManager::update_iteration(double dt){
     m_chrono += dt;
+
     if (m_chrono > Constantes::DELTA_TIME){
-        m_iteration_courante++;
+        if (m_temps_positif){
+            m_iteration_courante++;
+        } else{
+            m_iteration_courante--;
+        }
         m_chrono = 0.0;
     }
-    if (m_iteration_courante >= Constantes::NB_ITERATIONS){
-        m_iteration_courante = 0.0;
+
+    if (m_iteration_courante >= Constantes::NB_ITERATIONS - 1){
+        m_temps_positif = false;
     }
+    if (m_iteration_courante == 0){
+        m_temps_positif = true;
+    }
+
+
 }
 
 // draw

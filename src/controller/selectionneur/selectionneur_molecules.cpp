@@ -13,7 +13,7 @@
 ){
     std::vector<int> lst;
 
-    for (int i = 0; i < Constantes::NB_MOLECULES && lst.size() <= nb_max_mol; i++){
+    for (int i = 0; i < Constantes::NB_MOLECULES && lst.size() < nb_max_mol; i++){
         const MoleculeH2O& molecule_courante = boite_initiale.get_molecule_i(i);
         const Atome& atome_O = molecule_courante.get_O();
         const Vector3D<double>& pos_O = atome_O.get_pos();

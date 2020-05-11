@@ -20,6 +20,7 @@ private:
     int m_iteration_courante;
     double m_dx, m_dy, m_dz;
     double m_chrono;
+    bool m_temps_positif;
 public:
     SimulationManager();
 

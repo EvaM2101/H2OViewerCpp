@@ -12,6 +12,6 @@
                         Constantes::Z_FAR = 1000.0,
                         Constantes::LARGEUR_ECRAN = 1024*2,
                         Constantes::HAUTEUR_ECRAN = 700*2,
-                        Constantes::RAYON_O = 15.0,
-                        Constantes::RAYON_H = 10.0,
+                        Constantes::RAYON_O = 20.0,
+                        Constantes::RAYON_H = 15.0,
                         Constantes::DELTA_TIME = 0.1;
